@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 h-screen w-screen bg-backgroundPattern">
+  <div class="p-4 h-screen w-screen bg-backgroundPattern antialiased">
     <container/>
   </div>
 </template>
@@ -14,11 +14,18 @@
 </script>
 
 <style>
-#app {
-  font-family: 'Nunito Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #161B40;
-  background-color: #EDEDED;
-}
+  #app {
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #161B40;
+    background-color: #EDEDED;
+    font-size: 20px;
+  }
+
+  .icon{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
 </style>

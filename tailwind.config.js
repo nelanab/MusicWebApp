@@ -6,9 +6,12 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'backgroundPattern': "url('../img/Shapes.svg')",
-        'icon': "url('../img/icon.png')"
+        'userIcon': "url('../img/icon.png')",
+        'starlightBrigade': "url('../img/starlightbrigade.png')",
+        'tedleo': "url('../img/tedleo.png')",
+        'hayley': "url('../img/hayley.png')"
       })
-    },
+    }
   },
   variants: {
     extend: {},
