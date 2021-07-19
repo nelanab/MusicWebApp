@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full flex justify-center bg-white bg-opacity-50 rounded-2xl backdrop-filter backdrop-blur-lg overflow-hidden">
+  <div class="w-full h-full flex justify-center bg-white bg-opacity-50 rounded-2xl backdrop-filter backdrop-blur-lg overflow-hidden border-t-2 border-white">
     <navigationContainer></navigationContainer>
     <tabs></tabs>
     <playbar></playbar>
