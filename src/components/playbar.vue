@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-nowrap content-center justify-between pr-6 pl-6 items-center w-full bg-white bg-opacity-30 playbar absolute bottom-0 backdrop-filter backdrop-blur-lg border-t-2 border-white">
+    <div class="flex z-10 flex-nowrap content-center justify-between pr-6 pl-6 items-center w-full bg-gradient-to-b from-white bg-white bg-opacity-80 playbar absolute bottom-0 backdrop-filter backdrop-blur-2xl border-t-2 border-white">
         <div class="flex w-1/4">
             <div class="icon bg-starlightBrigade bg-cover "></div>
             <div class="album-info flex flex-wrap items-center overflow-hidden w-3/4 ml-4">
