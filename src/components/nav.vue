@@ -7,21 +7,67 @@
             <li class="font-bold mt-8 transition cursor-pointer">
                 <i class="fas fa-music mr-2"></i>Playlists
             </li>
-            <li class="my-4 transition cursor-pointer">Jams</li>
-            <li class="my-4 transition cursor-pointer">Rockkkk</li>
-            <li class="my-4 transition cursor-pointer">Car Jams</li>
-            <li class="my-4 transition cursor-pointer">Soundtrack</li>
-            <li class="my-4 transition cursor-pointer">:')</li>
-            <li class="my-4 transition cursor-pointer">Vibes</li>
+            <template v-for="playlist in playlists" :key="playlist.id">
+                <li class="my-4 transition cursor-pointer" @click="showPlaylist(playlist.id)"><router-link :to="'/playlist/' + playlist.id">{{playlist.title}}</router-link></li>
+            </template>
         </ul>
     </div>
 </template>
 
-<script setup>
+<script>
+    export default{
+        data () {
+            return {
+                playlists: [
+                    {
+                        title: 'Jams',
+                        id: 1,
+                        url: ''
+                    },
+                    {
+                        title: 'Rockkkkk',
+                        id: 2
+                    },
+                    
+                    {
+                        title: 'Car Jams',
+                        id: 3
+                    },
+                    
+                    {
+                        title: 'Soundtrack',
+                        id: 4
+                    },
+                    
+                    {
+                        title: ':\')',
+                        id: 5
+                    },
+                    
+                    {
+                        title: 'Vibes',
+                        id: 6
+                    }
+                ]
+            }
+        },
+        beforeMount () {
+            console.log(this.$route.params.id);
+            this.curAlbum = this.playlists.find(playlist => playlist.id == this.$route.params.id);
+        },
+        methods: {
+            showPlaylist (playlist) {
+                this.$router.push({ path: `/playlist/${playlist}` });
+            }
+        }
+    }
 </script>
 
 <style scoped>
     li:hover{
+        color: #41B853;
+    }
+    .router-link-active{
         color: #41B853;
     }
 </style>
